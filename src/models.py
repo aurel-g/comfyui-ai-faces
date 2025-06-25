@@ -4,6 +4,7 @@ import requests
 import insightface
 from .model_bisenet import BiSeNet
 import onnxruntime as ort
+from folder_paths import models_dir
 
 so = ort.SessionOptions()
 so.intra_op_num_threads = 1
@@ -16,7 +17,8 @@ def load_models():
 
     # 1. BiseNet
     bisenet_weights_url = "https://github.com/zllrunning/face-makeup.PyTorch/raw/master/cp/79999_iter.pth"
-    bisenet_weights_path = "/net/pr2/projects/plgrid/plggaigraphicsk46/models/79999_iter.pth"
+    os.makedirs(os.path.join(models_dir, "bisenet"), exist_ok=True)
+    bisenet_weights_path = os.path.join(models_dir, "bisenet", "79999_iter.pth")
 
     if not os.path.exists(bisenet_weights_path):
         with open(bisenet_weights_path, "wb") as f:
