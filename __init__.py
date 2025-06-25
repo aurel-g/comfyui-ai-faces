@@ -5,7 +5,7 @@ from pathlib import Path
 from PIL import Image
 import numpy as np
 
-from src.pipeline import process_image
+from .src.pipeline import process_image
 
 
 class PhotoVerification:

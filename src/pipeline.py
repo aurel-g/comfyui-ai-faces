@@ -1,10 +1,10 @@
 import cv2
 import time
-from src.utils.face_detection import detect_faces, face_size, is_head_pose_acceptable
-from src.utils.parsing import parse_face, are_glasses_transparent, check_face_features, check_occlusions
-from src.logs import error, ok
-from src.visualize import visualize_face_detections
-from src.models import load_models
+from .utils.face_detection import detect_faces, face_size, is_head_pose_acceptable
+from .utils.parsing import parse_face, are_glasses_transparent, check_face_features, check_occlusions
+from .logs import error, ok
+from .visualize import visualize_face_detections
+from .models import load_models
 
 MODELS = load_models()
 DEVICE = MODELS["device"]

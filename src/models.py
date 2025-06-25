@@ -2,7 +2,7 @@ import torch
 import os
 import requests 
 import insightface
-from src.model_bisenet import BiSeNet
+from .model_bisenet import BiSeNet
 import onnxruntime as ort
 
 so = ort.SessionOptions()

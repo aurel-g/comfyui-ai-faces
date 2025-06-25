@@ -1,7 +1,7 @@
 import cv2
 import torch
 import numpy as np
-from src.modules.photo_verification.visualize import visualize_parsing
+from ..visualize import visualize_parsing
 
 def parse_face(face_crop, parsing_session, visualize=False, device='cpu'):
     img_input = cv2.resize(face_crop, (512, 512))
