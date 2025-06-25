@@ -1,0 +1,11 @@
+opencv-python
+torch
+numpy
+torchvision
+requests
+onnxruntime[gpu]
+insightface
+supervision
+Pillow
+matplotlib
+numpy
